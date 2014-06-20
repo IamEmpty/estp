@@ -1,0 +1,331 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+  outline: none;
+  font-family: "PT Sans",sans-serif;
+}
+
+a,
+a:focus {
+  outline: none;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::-webkit-input-placeholder{color: #949494; opacity: 1;}
+::-moz-placeholder{color: #949494; opacity: 1;}
+:-moz-placeholder{color: #949494; opacity: 1;}
+:-ms-input-placeholder{color: #949494; opacity: 1;}
+
+input[placeholder]{text-overflow: ellipsis;}
+input::-moz-placeholder{text-overflow: ellipsis;}
+input:-moz-placeholder{text-overflow: ellipsis;}
+input:-ms-input-placeholder{text-overflow: ellipsis;}
+
+object.hiddenObject{visibility: hidden; width: 0; height: 0; margin: 0; padding: 0; border-style: none; border-width: 0; max-width: 0; max-height: 0;position: absolute}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+dl,
+dd,
+dt,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/*IE hack*/
+select::-ms-expand {
+  display: none;
+}
+
+p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/* ==========================================================================
+  Layouts
+   ========================================================================== */
+.l-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-width: 1000px;
+  min-height: 100%;
+}
+.l-w960{width: 960px;}
+.l-long{width: 10000px;}
+
+/* ==========================================================================
+  Classes
+   ========================================================================== */
+.__cb {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.__fl {
+  float: left!important;
+}
+.__fr {
+  float: right!important;
+}
+.__oh {
+  overflow: hidden;
+}
+
+.__pl-reset {
+  padding-left: 0;
+}
+.__pr-reset {
+  padding-right: 0;
+}
+
+.__pl5 {
+  padding-left: 5px;
+}
+.__pl10 {
+  padding-left: 10px;
+}
+
+.__mb20 {
+  margin-bottom: 20px;
+}
+.__mt20 {
+  margin-top: 20px;
+}
+
+.link-hover {
+  text-decoration: underline;
+}
+.link-hover:hover {
+  text-decoration: none;
+}
+.link-hover_u {
+  text-decoration: none;
+}
+.link-hover_u:hover {
+  text-decoration: underline;
+}
+
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+
+.us-text{
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.us-hide{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.img-hover:hover {
+  opacity: .8;
+}
+
+.el-r3 {
+  border-radius: 3px;
+}
+.el-r4 {
+  border-radius: 4px;
+}
+.el-r5 {
+  border-radius: 5px;
+}
+.el-r10 {
+  border-radius: 10px;
+}
+
+.style-n {
+  list-style: none;
+}
+.inline > li {
+  display: inline;
+}
+.inline-B {
+  padding-left: 0;
+  list-style: none;
+  font-size: 0;
+}
+.inline-B > li {
+  display: inline-block;
+  vertical-align: top;
+}
+.inline-T {
+  width: 100%;
+  display: table;
+  list-style: none;
+  font-size: 0;
+
+  > li,
+  > dl {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+  }
+}
+
+
+// Buttons
+
+.btn-orange {
+  @include button($vivid-orange, $vivid-orange-heavy);
+}
+
+.btn-like-link {
+  border: 0;
+  padding: 0;
+  margin: 2px 12px 4px;
+  border-radius: 0;
+  background: none;
+  text-decoration: none;
+  margin-bottom: -2px;
+  line-height: 1;
+  border-bottom: 1px solid $white; // Not afraid about color
+
+  &:hover {
+    color: $white; // Not afraid about color
+    border-bottom: 0;
+  }
+}
+
+
+// Block rules
+
+.gray-block {
+  padding: 10px 15px;
+  display: block;
+  height: 100%;
+  background: $very-light-gray-mostly-white;
+  border: 1px solid $very-light-gray;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 $very-light-gray;
+  margin: 0 0 23px 0;
+
+  &:hover {
+    background: $very-light-gray;
+    box-shadow: 0 4px 0 $light-gray;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__heading {
+    color: $dark-moderate-blue;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &__text {
+    color: $black;
+    font-size: 13px;
+
+    &-bold {
+      color: $dark-moderate-blue;
+      font-weight: bold;
+    }
+  }
+
+  &__link {
+    color: $dark-moderate-blue;
+    text-decoration: none;
+    border-bottom: 1px solid $dark-moderate-blue;
+
+    &:hover {
+      color: $dark-moderate-blue;
+      border-bottom: none;
+      text-decoration: none;
+    }
+  }
+}
+
+.light-link {
+  color: $soft-blue;
+  text-decoration: none;
+  border-bottom: 1px solid $soft-blue;
+
+  &:hover {
+    color: $soft-blue;
+    text-decoration: none;
+    border: none;
+  }
+}
+
+.invert-main {
+  @include invert($dark-moderate-blue-heavy);
+}
+
+.invert-second {
+  @include invert($mostly-desaturated-dark-blue);
+}
+
+.box-contains-form {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  border-radius: 5px;
+  padding: 5px 12px;
+
+  &__heading {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__label {
+    font-weight: normal;
+  }
+}
+
+.form-control-has-above {
+  display: block;
+}
+
+.bg-russian-flag {
+  background-image: url('../img/flag-of-russia.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+
+
+// Size rules
+
+.size-under-header {
+  margin-right: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,53 @@
+// Table style
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+
+  > .thead {
+    > .tr {
+      > .th {
+        padding: 15px 8px 15px 15px;
+        line-height: 1.42857;
+        border-top: 1px solid $very-light-gray;
+        vertical-align: bottom;
+        border-bottom: 2px solid $very-light-gray;
+        text-align: left;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  > .tbody {
+    > .tr {
+      > .td {
+        padding: 8px;
+        line-height: 1.42857;
+        vertical-align: top;
+        border-top: 1px solid $very-light-gray;
+        font-size: 12px;
+
+        .link {
+          color: $dark-moderate-blue;
+          font-weight: bold;
+          font-size: 14px;
+          text-decoration: none;
+          border-bottom: 1px solid $dark-moderate-blue;
+
+          &:hover {
+            border-bottom: none;
+            color: $dark-moderate-blue;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+

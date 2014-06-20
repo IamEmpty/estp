@@ -1,0 +1,38 @@
+.form-group {
+  margin: 5px 0;
+}
+
+.form-control {
+  box-shadow: none;
+  border-radius: 2px;
+  border: none;
+  height: 28px;
+  padding: 4px 8px;
+
+  &:focus {
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.btn {
+  padding: 4px 12px;
+}
+
+label {
+  margin-bottom: 3px;
+}
+
+.nav {
+  list-style: none outside none;
+
+  &__item {
+    &__link {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

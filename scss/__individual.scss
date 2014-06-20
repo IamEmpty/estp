@@ -1,0 +1,32 @@
+.logotype {
+  display: inline-block;
+  padding: 13px 0 20px;
+}
+
+.primary-navigation {
+  margin: 15px auto 0;
+  border-top: 3px solid $dark-moderate-blue-heavy;
+}
+
+.footer {
+  padding: 48px 0;
+
+  &-navigation {
+    .item {
+      font-size: 13px;
+      margin: 15px 0;
+
+      &:first-child {
+        margin: 0 0 15px 0;
+      }
+
+      &:last-child { // IE8
+        margin: 15px 0 0 0;
+      }
+
+      &__link {
+        font-size: 13px;
+      }
+    }
+  }
+}

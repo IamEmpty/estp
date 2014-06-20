@@ -1,0 +1,20 @@
+// Invert colors in a block
+
+@mixin invert($color) {
+  background-color: $color;
+  color: $white;
+
+  .link {
+    color: $white;
+  }
+}
+
+@mixin button($bg-color, $bg-color-hover, $color:$white, $color-hover:$white) {
+  background: $bg-color;
+  color: $color;
+
+  &:hover {
+    background: $bg-color-hover;
+    color: $color-hover;
+  }
+}
