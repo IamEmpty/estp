@@ -39,8 +39,8 @@ $(document).ready(function() {
 
 
         $(".collapse").collapse().each(function() {
-            if( isStored( this.id ) ) {
-                $( this ).collapse( 'show' );
+            if(isStored(this.id)) {
+                $(this).collapse('show');
             }
         });
 
