@@ -17,6 +17,8 @@ $(document).ready(function() {
         // Depend on Bootstrap v3.1.1
         // Bootstrap use class 'in' for opened elements and we well use it too
 
+        $this = $(this);
+
         var defaults = {
             animationDuration: 500,
             animateEasing: 'swing',
@@ -26,8 +28,30 @@ $(document).ready(function() {
 
         var settings = $.extend( {}, defaults, options );
 
-        sessionStorage.setItem(currentID, currentID);
-        window.sessionStorage.getItem('#' + currentID);
 
+        $('.collapse').on('shown.bs.collapse', function () {
+            sessionStorage.setItem(this.id, this.id);
+        });
+
+        $('.collapse').on('hidden.bs.collapse', function () {
+            sessionStorage.removeItem(this.id, this.id);
+        });
+
+
+        $(".collapse").collapse().each(function() {
+            if( isStored( this.id ) ) {
+                $( this ).collapse( 'show' );
+            }
+        });
+
+        // Find storage data
+        function isStored(identificator) {
+            if(window.sessionStorage.getItem(identificator) == identificator) {
+               console.log(identificator);
+                return true
+            } else {
+                return false
+            }
+        }
     };
 }( jQuery ));
