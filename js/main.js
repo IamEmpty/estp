@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('panel-group').accordionWithLinks({
+    $('.panel-group').accordionWithLinks({
         animationDuration: 400
     });
 });
@@ -7,6 +7,8 @@ $(document).ready(function() {
 
 (function( $ ) {
     $.fn.accordionWithLinks = function(options) {
+        // Plugin writing in compabilites with bootstrap.js
+        // Bootstrap use class 'in' for opened elements and we well use it too
 
         var defaults = {
             animationDuration: 500,
@@ -18,20 +20,38 @@ $(document).ready(function() {
         var settings = $.extend( {}, defaults, options );
 
 
+        // Open blocks
+        $('.collapse').each(function() {
+            var currentID = $(this).attr('id');
+            console.log("collapseTest " + currentID);
+
+            var collapsed = window.sessionStorage.getItem('#' + currentID);
+            if(collapsed == currentID) {
+                $(this).toggle('fast');
+            } else {
+                console.log('30 line is not working');
+                console.log(currentID);
+                console.log('H! ' + collapsed);
+            }
+        });
+
+
         // in case of clicking block will be hidden or showed
         $(settings.accordionHeading).on('click', function() {
-            var currentCollapsedBlock = $(this).next(settings.accordionCollapse);
-
+            $this = $(this);
+            var currentCollapsedBlock = $this.next(settings.accordionCollapse);
             currentCollapsedBlock.toggle(settings.animationDuration, settings.animateEasing);
-            currentCollapsedBlock.toggleClass('on');
+            var currentID = currentCollapsedBlock.attr('id');
 
-            var AndOnePrepare =  currentCollapsedBlock + ':visible';
-
-            if(currentCollapsedBlock.hasClass('on') == true) {
-                var currentID = currentCollapsedBlock.attr('id');
-                sessionStorage.setItem('currentID', currentID);
+            if($this.next().is(':visible') != true) {
+                $this.next().addClass('is-opened');
+                sessionStorage.setItem(currentID, currentID);
+                console.log('visible')
             } else {
-                alert('not');
+                $this.next().addClass('is-closed');
+                sessionStorage.setItem(currentID, currentID);
+                //sessionStorage.removeItem(currentID, currentID);
+                console.log('NOT visible')
             }
 
             return false;
@@ -58,37 +78,11 @@ $(document).ready(function() {
                     $this.closest(settings.accordionHeading).next().toggle('fast');
                 }
             });
-        } else {
-            // Open block
-            var collapsed = window.sessionStorage.getItem('currentID');
-            var Prepare = "#" + collapsed;
-            $(Prepare).toggle('fast');
         }
 
 
-        /*jQuery(".toggle_container").toggle($.cookie('showTop') != 'collapsed');
-        jQuery("div.question_trigger").click(function() {
-            jQuery(this).toggleClass("active").next().toggle();
-            var new_value = $(".toggle_container").is(":visible") ? 'expanded' : 'collapsed';
-            $.cookie('showTop', new_value);
-        });*/
-
-
-
-
         // Check Storage in a browser
-        if(typeof(Storage) !== "undefined") {
-            // Code for localStorage/sessionStorage.
-
-            /*if($('.collapse').is(':visible') == true) {
-                alert('1');
-            }*/
-
-            /*$(".collapse").collapse().each(function(){
-                if(isStored(this.id)) {
-                    $(this).collapse('hide');
-                }
-            });*/
+        if(typeof(Storage) !== 'undefined') {
 
         } else {
             // Sorry! No Web Storage support..
