@@ -1,11 +1,11 @@
-// Import rewriten bootstrap style
-@import '_bootstrap-overwrite';
-
 // Import variables
 @import '_variables';
 
 // Import mixins
 @import '_mixins';
+
+// Import rewriten bootstrap style
+@import '_bootstrap-overwrite';
 
 // Import typography
 @import "_typography";

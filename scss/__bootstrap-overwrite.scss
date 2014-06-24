@@ -36,3 +36,32 @@ label {
     }
   }
 }
+
+
+// Pagination
+
+.pagination {
+  > li {
+    > a {
+      color: $very-dark-gray;
+      margin-right: 8px;
+      border-radius: 4px;
+      background: linear-gradient($white, $very-light-gray-2);
+
+      &:hover {
+        color: $bright-blue;
+        background: linear-gradient($very-light-gray-2, $white);
+      }
+    }
+
+    &:last-child,
+    &:first-child {
+      a {
+        &:hover {
+          color: $very-dark-gray;
+          background: $very-light-gray-3;
+        }
+      }
+    }
+  }
+}

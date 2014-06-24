@@ -86,12 +86,15 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-.__fl {
+
+// Instead of code below we use 'pull-left' and 'pull-right'
+/*.__fl {
   float: left!important;
 }
 .__fr {
   float: right!important;
-}
+}*/
+
 .__oh {
   overflow: hidden;
 }
@@ -205,6 +208,12 @@ p {
   @include button($vivid-orange, $vivid-orange-heavy);
 }
 
+.btn-one-in-col {
+  margin-bottom: -55px;
+  float: right;
+  margin-top: 28px; // Need fix
+}
+
 .btn-like-link {
   border: 0;
   padding: 0;
@@ -222,6 +231,9 @@ p {
   }
 }
 
+.btn-additional-space {
+  padding: 3px 30px;
+}
 
 // Block rules
 
@@ -297,6 +309,7 @@ p {
   font-weight: normal;
   border-radius: 5px;
   padding: 5px 12px;
+  margin-bottom: 25px; //?
 
   &__heading {
     font-size: 14px;
@@ -305,6 +318,15 @@ p {
 
   &__label {
     font-weight: normal;
+  }
+}
+
+.box-contains-form-view-2 {
+  background-color: $dark-blue;
+  padding: 10px 12px 7px;
+
+  &__label {
+    font-size: 12px;
   }
 }
 
@@ -319,6 +341,9 @@ p {
 }
 
 
+.new-line {
+  display: block;
+}
 
 // Size rules
 
