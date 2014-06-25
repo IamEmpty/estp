@@ -1,0 +1,377 @@
+.form-group {
+    margin: 5px 0; }
+
+.form-control {
+    box-shadow: none;
+    border-radius: 2px;
+    border: none;
+    height: 28px;
+    padding: 4px 8px; }
+.form-control:focus {
+    box-shadow: none;
+    border: none; }
+
+.btn {
+    padding: 4px 12px; }
+
+label {
+    margin-bottom: 3px; }
+
+.pagination > li > a {
+    color: #5a5a5a;
+    margin-right: 8px;
+    border-radius: 4px;
+    background: linear-gradient(white, #efefef); }
+.pagination > li > a:hover {
+    color: #3eb5e0;
+    background: linear-gradient(#efefef, white); }
+.pagination > li:last-child a:hover, .pagination > li:first-child a:hover {
+    color: #5a5a5a;
+    background: #e2e2e2; }
+
+/* ==========================================================================
+  Typograthy
+   ========================================================================== */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Sans"), local("PTSans-Regular"), url(../fonts/O5pe56LvR8OXax_Q9tUMDg.woff) format("woff"); }
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Sans Bold"), local("PTSans-Bold"), url(../fonts/kTYfCWJhlldPf5LnG4ZnHBsxEYwM7FgeyaSgU71cLG0.woff) format("woff"); }
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local("PT Sans Italic"), local("PTSans-Italic"), url(../fonts/GpWpM_6S4VQLPNAQ3iWvVT8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+/* Icon moon fonts */
+@font-face {
+    font-family: 'icomoon';
+    src: url("../fonts/icomoon.eot?z29eap");
+    src: url("../fonts/icomoon.eot?#iefixz29eap") format("embedded-opentype"), url("../fonts/icomoon.woff?z29eap") format("woff"), url("../fonts/icomoon.ttf?z29eap") format("truetype"), url("../fonts/icomoon.svg?z29eap#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.icon-box-add:before {
+    content: "\e600"; }
+
+.root-certificate {
+    font-size: 41px;
+    color: #f4a124; }
+
+.__text-L {
+    text-align: left; }
+
+.__text-R {
+    text-align: right; }
+
+.__text-C {
+    text-align: center; }
+
+.__un {
+    text-decoration: underline; }
+
+.__ub {
+    font-weight: 400; }
+
+.__b {
+    font-weight: bold; }
+
+.__i {
+    font-style: italic; }
+
+.__upper {
+    text-transform: uppercase; }
+
+.__f10 {
+    font-size: 10px !important; }
+
+.__f11 {
+    font-size: 11px !important; }
+
+.__f12 {
+    font-size: 12px !important; }
+
+.__f13 {
+    font-size: 13px !important; }
+
+.__f14 {
+    font-size: 14px !important; }
+
+.__f15 {
+    font-size: 15px !important; }
+
+.__f16 {
+    font-size: 16px !important; }
+
+.__f17 {
+    font-size: 17px !important; }
+
+.__f18 {
+    font-size: 18px !important; }
+
+.__f19 {
+    font-size: 19px !important; }
+
+.__f20 {
+    font-size: 20px !important; }
+
+.__f21 {
+    font-size: 21px !important; }
+
+.__f22 {
+    font-size: 22px !important; }
+
+.__f23 {
+    font-size: 23px !important; }
+
+.__f24 {
+    font-size: 24px !important; }
+
+.__f25 {
+    font-size: 25px !important; }
+
+.__f26 {
+    font-size: 26px !important; }
+
+.__f27 {
+    font-size: 27px !important; }
+
+.__f28 {
+    font-size: 28px !important; }
+
+.__f29 {
+    font-size: 29px !important; }
+
+.__f30 {
+    font-size: 30px !important; }
+
+.__f41 {
+    font-size: 30px !important; }
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    outline: none;
+    font-family: "PT Sans",sans-serif; }
+
+a,
+a:focus {
+    outline: none; }
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none; }
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none; }
+
+::-webkit-input-placeholder {
+    color: #949494;
+    opacity: 1; }
+
+::-moz-placeholder {
+    color: #949494;
+    opacity: 1; }
+
+:-moz-placeholder {
+    color: #949494;
+    opacity: 1; }
+
+:-ms-input-placeholder {
+    color: #949494;
+    opacity: 1; }
+
+input[placeholder] {
+    text-overflow: ellipsis; }
+
+input::-moz-placeholder {
+    text-overflow: ellipsis; }
+
+input:-moz-placeholder {
+    text-overflow: ellipsis; }
+
+input:-ms-input-placeholder {
+    text-overflow: ellipsis; }
+
+object.hiddenObject {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    border-width: 0;
+    max-width: 0;
+    max-height: 0;
+    position: absolute; }
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table; }
+
+.clearfix:after {
+    clear: both; }
+
+dl,
+dd,
+dt,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0; }
+
+/*IE hack*/
+select::-ms-expand {
+    display: none; }
+
+p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
+
+/* ==========================================================================
+  Layouts
+   ========================================================================== */
+
+.btn-orange {
+    background: #f4a124;
+    color: white; }
+.btn-orange:hover {
+    background: #f2960c;
+    color: white; }
+
+.btn-one-in-col {
+    margin-bottom: -55px;
+    float: right;
+    margin-top: 28px; }
+
+.btn-add-space {
+    padding: 3px 30px;}
+
+.light-link {
+    color: #4c98df;
+    text-decoration: none;
+    border-bottom: 1px solid #4c98df; }
+.light-link:hover {
+    color: #4c98df;
+    text-decoration: none;
+    border: none; }
+
+.invert-main {
+    background-color: #2f5279;
+    color: white; }
+.invert-main .link {
+    color: white; }
+
+.invert-second {
+    background-color: #6786a8;
+    color: white; }
+.invert-second .link {
+    color: white; }
+
+.box-contains-form {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    border-radius: 5px;
+    padding: 5px 12px;
+    margin-bottom: 25px; }
+.box-contains-form__heading {
+    font-size: 14px;
+    margin: 0; }
+.box-contains-form__label {
+    font-weight: normal; }
+
+.box-contains-form-view-2 {
+    background-color: #03517a;
+    padding: 10px 12px 7px; }
+.box-contains-form-view-2__label {
+    font-size: 12px; }
+
+.form-control-has-above {
+    display: block; }
+
+.bg-russian-flag {
+    background-image: url("../img/flag-of-russia.jpg");
+    background-repeat: no-repeat;
+    background-position: top right; }
+
+.new-line {
+    display: block; }
+
+.size-under-header {
+    margin-right: 14px; }
+.size-under-header:last-child {
+    margin-right: 0; }
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent; }
+.table > .thead > .tr > .th {
+    padding: 15px 8px 15px 15px;
+    line-height: 1.42857;
+    border-top: 1px solid #f0f0f0;
+    vertical-align: bottom;
+    border-bottom: 2px solid #f0f0f0;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal; }
+.table > .tbody > .tr > .td {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #f0f0f0;
+    font-size: 12px; }
+.table > .tbody > .tr > .td .link {
+    color: #3d5b7f;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid #3d5b7f; }
+.table > .tbody > .tr > .td .link:hover {
+    border-bottom: none;
+    color: #3d5b7f;
+    text-decoration: none; }
+
+.table-view-2 > .thead > .tr > .th {
+    padding: 8px 8px 8px 20px;
+    font-size: 13px; }
+.table-view-2 > .tbody > .tr > .td {
+    padding: 8px 8px 8px 20px;
+    font-size: 13px;
+    color: black; }
+.table-view-2 > .tbody > .tr > .td .light-link {
+    color: #3d5b7f;
+    font-weight: normal;
+    font-size: 13px;
+    border-bottom: 1px solid #3d5b7f; }
+.table-view-2 > .tbody > .tr > .td .light-link:hover {
+    color: #3d5b7f; }

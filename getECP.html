@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Page with different styles</title>
+    <!-- Add bootsrap style -->
+    <link rel="stylesheet" type="text/css" href="scss/bootstrap.css">
+    <!-- Add base style -->
+    <link rel="stylesheet" type="text/css" href="css/getECP.css">
+
+    <!-- Add jqury library -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- Own scripts -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+
+
+    <main class="main">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="section invert-main box-contains-form box-contains-form-view-2 bg-russian-flag">
+                        <h3 class="h3 __upper box-contains-form__heading">Полный перечень авторизованных УЦ</h3>
+
+                        <form class="form" method="get" enctype="multipart/form-data" role="form">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="box-contains-form__label">Наименование</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="box-contains-form__label">Поиск по региону</label>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <button class="btn btn-orange btn-one-in-col btn-add-space __upper  __f15" type="search ">Искать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-view-2">
+                        <thead class="thead invert-second">
+                        <tr class="tr">
+                            <th class="th">
+                                Наименование УЦ
+                            </th>
+                            <th class="th">
+                                Регион / Адрес
+                            </th>
+                            <th class="th">
+                                Корневой сертификат
+                            </th>
+                            <th class="th">
+                                Отозванные сертификаты CRL
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody class="tbody">
+                        <tr class="tr">
+                            <td class="td">
+                               <a href="#" class="link"> ООО "СЕРТУП-ПРО"</a>
+                            </td>
+                            <td class="td">
+                                <span class="new-line">Санкт-Петербург /</span>
+                                <span class="new-line">Моховая 27, офис 207</span>
+                            </td>
+                            <td class="td">
+                                <i class="icon-box-add root-certificate"></i>
+                            </td>
+                            <td class="td">
+                                <a href="http://ca.sertum.ru/cdp/sertum-pro-2011.crl" class="link light-link">http://ca.sertum.ru/cdp/sertum-pro-2011.crl</a>
+                            </td>
+                        </tr>
+
+                        <tr class="tr">
+                            <td class="td">
+                                <a href="#" class="link"> ООО "Калуга Астрал"</a>
+                            </td>
+                            <td class="td">
+                                <span class="new-line">Калужская обл./</span>
+                                <span class="new-line">Южная 39, Литер А, офис 149</span>
+                            </td>
+                            <td class="td">
+                                <i class="icon-box-add root-certificate"></i>
+                            </td>
+                            <td class="td">
+                                <a href="http://ca.sertum.ru/cdp/sertum-pro-2011.crl" class="link light-link">http://ca.sertum.ru/cdp/sertum-pro-2011.crl</a>
+                            </td>
+                        </tr>
+
+                        <tr class="tr">
+                            <td class="td">
+                                <a href="#" class="link"> СРО НП "СРО "СПС ЮР"</a>
+                            </td>
+                            <td class="td">
+                                Краснодар
+                            </td>
+                            <td class="td">
+                                <i class="icon-box-add root-certificate"></i>
+                            </td>
+                            <td class="td">
+                                <a href="http://ca.sertum.ru/cdp/sertum-pro-2011.crl" class="link light-link">http://ca.sertum.ru/cdp/sertum-pro-2011.crl</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="pagination">
+                        <li class="item pagination__item">
+                            <a href="#">&laquo; Предидущая страница</a>
+                        </li>
+                        <li class="item pagination__item"><a href="#">1</a></li>
+                        <li class="item pagination__item"><a href="#">2</a></li>
+                        <li class="item pagination__item"><a href="#">3</a></li>
+                        <li class="item pagination__item"><a href="#">4</a></li>
+                        <li class="item pagination__item"><a href="#">5</a></li>
+                        <li class="item pagination__item pagination__item-next">
+                            <a href="#"">Следующая страница &raquo;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+</html>
