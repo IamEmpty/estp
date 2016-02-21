@@ -1,2 +1,12 @@
 # WebStorm
 .idea
+
+# OS X
+.DS_Store
+
+# Node
+node_modules
+*.log
+
+# Bower
+bower_components
